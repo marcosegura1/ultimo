@@ -1,0 +1,16 @@
+.segundo-nav{
+  backdrop-filter:  blur(60px);
+background-color: rgba(138, 8, 8, 0.5);
+}
+.transparente{
+background-color: transparent !important;
+}
+.css-x8v767-MuiGrid-root{
+  margin:0px !important;
+}
+.react-parallax-bgimage{
+filter: brightness(54%) !important;
+}
+.css-1w56vzs-MuiGrid-root{
+  margin-left:0px !important
+}
