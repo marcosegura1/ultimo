@@ -10,15 +10,25 @@
     margin-top:30px
 }
 .divisor{
-    width: 15%;
+    width: 10%;
     height: 2px;
-    background-color: #4b4b4b;
+    background-color: #003784;
     margin: 0 auto;
     margin-top:25px;
     margin-bottom:20px;
 }
 
-
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.css-1ps6pg7-MuiPaper-root:before{
+    content:"";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(8, 8, 8, 0.5);
+}
 
 @media(max-width: 600px){
     .objeto{
@@ -49,6 +59,30 @@ margin-top:40px !important;
 .textoizquierda{
     text-align: center;
 }
+.item-imagen{
+    padding:0px !important;
+    padding-top: 25px !important
+}
+.titulo2{
+    text-align: justify;
+}
+.titulo3{
+    text-align: justify;
+}
+.centrar-text{
+ text-align: center;   
+}
+.description-content{
+    width: 100% !important;
+}
+.imagen6{
+    width: 100% !important;
+    height:  100% !important;
+}
+.contenedor-imagen{
+    padding-left: 0px !important;
+    padding-top: 30px !important;
+}
 }
 
 .centrar{
@@ -62,6 +96,7 @@ margin: auto;
     padding:20px;
 }
 
+
 .divisor-white{  
     width: 15%;
     height: 2px;
@@ -70,3 +105,39 @@ margin: auto;
     margin-top:25px;
     margin-bottom:20px;
 }
+.contenido-bottom{
+    background:#003784;
+color:white;
+padding-top: 25px;
+padding-bottom: 25px;
+text-align: center;
+z-index: 999999;
+}
+
+.descripcion{
+    line-height: 28px !important;
+    margin-top:15px;
+    text-align: justify;
+}
+.resaltar{
+    font-weight: 600;
+    color: black;
+}
+
+.fondo{
+    background-image: url("../assets/fondo.jpg");
+}
+.fondo-about{
+    background-image: url("../assets/truck.jpg");
+}
+.fondo-services{
+    background-image: url("../assets/carga.jpg");
+}
+.truncate {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height:36px;
+  }

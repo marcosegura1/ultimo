@@ -1,6 +1,8 @@
 .segundo-nav{
-  backdrop-filter:  blur(60px);
-background-color: rgba(138, 8, 8, 0.5);
+background-color: rgb(255, 255, 255);
+}
+.css-1p823my-MuiListItem-root{
+  padding-left:0px !important;
 }
 .transparente{
 background-color: transparent !important;
@@ -9,8 +11,67 @@ background-color: transparent !important;
   margin:0px !important;
 }
 .react-parallax-bgimage{
-filter: brightness(54%) !important;
+filter: brightness(47%) !important;
 }
 .css-1w56vzs-MuiGrid-root{
   margin-left:0px !important
 }
+.sombra{
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+}
+.sub-footer{
+  background-color: #00214f;  
+  color:white;
+  width:100%;
+}
+a{
+  text-decoration:none !important
+}
+
+.search-btn{
+  color:#003784 !important;
+  border-color:#003784 !important;
+}
+.search-btn:hover{
+  color:white !important;
+  background-color:#003784 !important;
+}
+.footer-bg{
+
+  background-image: url("./assets/footer-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.background-footer{
+background-color: #003784 !important;
+}
+.email-container{
+  margin-left:90px;
+}
+
+.icon-social{
+  margin-right:30px !important;
+
+}
+
+@media(max-width: 600px){
+.container-instagram{
+display:none
+}
+.copy{
+  text-align: center;
+}
+.social-container{
+  padding-top:30px !important;
+}
+.container-links{
+  padding-top:30px;
+  padding-left:-13px !important;
+}
+.social-icons{display: flex;justify-content: center !important;padding-top:10px;padding-bottom:5px}
+}
+
+
+.social-icons{display: flex;justify-content: flex-end }
+

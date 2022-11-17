@@ -10,7 +10,6 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea, CardActions } from '@mui/material';
 import Paper from '@mui/material/Paper';
 import './Home.css';
-import Image from '../assets/laptop.jpg';
 import {Parallax} from 'react-parallax';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
@@ -41,17 +40,17 @@ const styles = {
 
  
 
-const Home = () => {
+const Services = () => {
 
   return (
     <div>
       <Card>
       <CardActionArea >
-      <Paper style={styles.paperContainer} className="fondo">
+      <Paper style={styles.paperContainer} className="fondo-services">
         <div style={styles.contenedorObj} >
                 <Box sx={{ pl: 5, pr:5}} >Gashari Logistics & Transportation Company LLC 
                   </Box >
-                  <Link to="/contact" ><Button variant="contained" sx={{mt:3}} style={{backgroundColor:"#003784"}}>Contact</Button></Link>
+                  <Link to="/contact" >   <Button variant="contained" sx={{mt:3}} style={{backgroundColor:"#003784"}}>Contact</Button></Link>
                 </div>
             </Paper>
         
@@ -90,17 +89,13 @@ const Home = () => {
           <Typography gutterBottom variant="h5" component="div"  style={{textAlign:"center"}}>
           Inventory management.
           </Typography>
-          <Typography variant="body2" color="text.secondary" className="truncate" sx={{textAlign:"justify"}}>
+          <Typography variant="body2" color="text.secondary"  sx={{textAlign:"justify"}}>
           It is a warehouse operation that consists of managing the registration of products, the supply of merchandise and its dispatch. Inventory includes all the tangible goods that a company uses to manufacture or satisfy customer demand.
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-    
-        <Link to="/services" >
-        <Button size="small" color="primary"  style={{margin:"auto"}}>
-     See more
-        </Button></Link>
+       
       </CardActions>
     </Card>
       </Grid>
@@ -118,16 +113,13 @@ const Home = () => {
           Distribution
 of Parcel
           </Typography>
-          <Typography variant="body2" color="text.secondary" className="truncate" sx={{textAlign:"justify"}}>
-
+          <Typography variant="body2" color="text.secondary"  sx={{textAlign:"justify"}}>
           We collect, transport and distribute your packages with certified door-to-door deliveries, efficiency and punctuality. We offer you through our services to keep you constantly informed about the current status of your packages in their distribution.
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-      <Link to="/services" > <Button size="small" color="primary" style={{margin:"auto"}}>
-          See more
-        </Button></Link>
+      
       </CardActions>
     </Card>
       </Grid>
@@ -144,14 +136,12 @@ of Parcel
           <Typography gutterBottom variant="h5" component="div" style={{textAlign:"center"}}>
           Light and Heavy Cargo Transportation
           </Typography>
-          <Typography variant="body2" color="text.secondary" className="truncate" sx={{textAlign:"justify"}}>In the cargo transport that we carry out, we take care of moving goods and merchandise from one place of origin to another of destination, in such a way that they reach their destination in good condition and within a pre-established period of time.
+          <Typography variant="body2" color="text.secondary"  sx={{textAlign:"justify"}}>In the cargo transport that we carry out, we take care of moving goods and merchandise from one place of origin to another of destination, in such a way that they reach their destination in good condition and within a pre-established period of time.
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-      <Link to="/services" ><Button size="small" color="primary" style={{margin:"auto"}}>
-          See more
-        </Button></Link>
+   
       </CardActions>
     </Card>
       </Grid>
@@ -160,49 +150,7 @@ of Parcel
    
    
     </Container>
-    <Parallax   className="parallax" bgImage={Image}  strength={800}>
-         <div style={{ height: 350 , paddingLeft: "30px", paddingRight: "30px",display:"flex", justifyContent:"Center", alignItems:"center"}}>
-          <div style={{display:"block", textAlign:"center"}}>
-         <div className="titulo" style={{ fontSize: 40, color: "#fff", fontWeight:"600" }}>Highly qualified staff</div> 
-         <div className="titulo titulo3" style={{ fontSize: 15, color: "#fff",marginTop:"20px" }}>The experience and constant training of our technical staff are the pillars on which we<br/>  support the quality of the service we provide.</div> 
-    <div className="divisor-white"> </div>
-         </div>
-       </div> 
-    </Parallax>
-    <Container className="margin-superior">
-      <Grid container sx={{  p: 2 }} >
-        <Grid item md={6} sm={12} >
-        <img src={require('../assets/mapa.jpg')} alt="asd" className="imagen5"/>
-       </Grid>
-       <Grid item md={6} sm={12} >
-    
 
-       <Card className="contenedor-derecho">
-      <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom className="centrar-text"> 
-        Gashari Logistics & Transportation Company LLC 
-        </Typography>
-        <Typography variant="h5" component="div" style={{marginTop:"15px"}} className="centrar-text">
-        Customized logistics solutions
-        </Typography>
-        <Typography variant="body2"  sx={{mt:2}} className="description-content"style={{width:"90%", textAlign:"justify"}}>
-        We are an operator
-logistics dedicated to
-provide solutions to
-needs of
-our clients
-        </Typography>
-      </CardContent>
-      <CardActions>
-       <Link to="/about"> <Button size="small" style={{margin:""}}>See more
-</Button></Link>|
-      </CardActions>
-    </Card>
-
-
-       </Grid>
-      </Grid>
-    </Container>
 
     <Parallax className="parallax"  bgImage={require('../assets/avion.jpg')}  strength={400}>
       <Container>
@@ -286,42 +234,13 @@ our clients
         </ImageListItem>
     </ImageList>
     </Grid>
-   <Link to="/services"><Button variant="contained" style={{width:"200px"}}sx={{mt:3}}>See more</Button></Link> 
     </Grid>
     </Container>
     </Parallax>
-    <Container>
-    <Grid container sx={{  p: 2, mt:5, mb:5}} >
-      <Grid item md={4} sm={12} className="textoizquierda">
-      <Typography variant="h6"  gutterBottom style={{color:"#003784",fontWeight:"bold"}}>
-      TRANSPORTATION COMPANY
-    </Typography>
-    <Typography variant="h4" sx={{my:2}} style={{fontWeight:"bold"}} gutterBottom  >
-    We provide full range global logistics solution
-    </Typography>
-    <Typography variant="h5" gutterBottom component="div" style={{textAlign:"justify",color:"#003784"}} >
-    You can take your freight & logistics needs with a personal approach with us
-    </Typography>
-    <Typography gutterBottom component="div" style={{textAlign:"justify"}} sx={{mt:3}}>
-    We transport all tyspes of cargo locally and nationally with high safety and quality standards.
-
-    </Typography>
-      </Grid>
-      <Grid item md={4} sm={12} className="contenedor-imagen"style={{display:"flex",justifyContent:"center",margin:"auto",paddingLeft:"40px"}}>
-        <div style={{display:"block", textAlign:"center"}}>
-        <img style={{width:"650px",height:"360px"}} 
-            alt="asd" 
-            className="imagen6"
-              src={require('../assets/truck.jpg')}
-            />
-            
-    </div>
-      </Grid>
-    </Grid>
-    </Container>
+  
     <Footer/>
     </div>
   )
 } 
 
-export default Home
+export default Services

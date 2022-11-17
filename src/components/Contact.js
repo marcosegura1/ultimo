@@ -3,26 +3,20 @@ import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea, CardActions } from '@mui/material';
-import { styled } from "@mui/material/styles";
-import Paper from '@mui/material/Paper';
+import { CardActionArea } from '@mui/material';
 import './Home.css';
-import Image from '../assets/wallpaper.jpg';
+import './Contact.css';
+import Image from '../assets/laptop.jpg';
 import {Parallax} from 'react-parallax';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import IconButton from '@mui/material/IconButton';
-import InfoIcon from '@mui/icons-material/Info';
-
+import Footer from './Footer';
+import TextField from '@mui/material/TextField';
+import Paper from '@mui/material/Paper';
+import { Link } from "react-router-dom";
 const styles = {
   paperContainer: {
-      backgroundImage: `url(${Image})`,
-      height: 500,
+      height: "100vh",
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
@@ -30,286 +24,151 @@ const styles = {
       justifyContent: 'center',
       alignItems: 'center',
       color: 'white',
-      fontSize: '2rem'
-    
+      fontSize: '2rem',
   },
   contenedorObj: {
     display: 'block',
     width: '100%',
     textAlign: 'center',
-     
+    zIndex:"2"
   }
   }
 
  
 
-const CardContentNoPadding = styled(CardContent)(`
-background:black;
-color:white;
-padding: 70;
-text-align: center;
-`);
-
-
 const Contact = () => {
+
+
   return (
     <div>
       <Card>
-      <CardActionArea>
-      <Paper style={styles.paperContainer}>
-        <div style={styles.contenedorObj}>
-                <Box sx={{ pl: 5, pr:5}}>Some text to fill the Paper Component</Box >
-                <Button variant="contained">Contained</Button>
+      <CardActionArea >
+      <Paper style={styles.paperContainer} className="fondo-contact">
+        <div style={styles.contenedorObj} >
+                <Box sx={{ pl: 5, pr:5}} >Gashari Logistics & Transportation Company LLC 
+                  </Box >
+                  <Link to="/contact" >    <Button variant="contained" sx={{mt:3}} style={{backgroundColor:"#003784"}}>Contact</Button></Link>
                 </div>
             </Paper>
-        <CardContentNoPadding  >
-          <Typography gutterBottom variant="h5" component="div">
-            Lizard
-          </Typography>
-          <Typography variant="body2" color="text.whtie">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
-        </CardContentNoPadding>
+        
       </CardActionArea>
     
     </Card>  
-    <Container>
+    <div className="contenido-bottom" >
+          <Typography gutterBottom variant="h5" component="div"  >
+            About Us
+          </Typography>
+          <Typography variant="body2" color="text.whtie">
+            <Container>
+              <div className="descripcion">
+              Gashari Logistics & Transportation Company LLC, provides moving and transportation services. After a few years, with the experience we had during that time, we were able to expand to provide you with a better and more complete service. Today we are one of the best Logistics Operators with more than 10 years of experience
+</div></Container>
+          </Typography>
+        </div>
+    <Container style={{display:"flex",justifyContent:"center"}}>
+      <div >
+      <div style={{display:"block",width:"100%"}}>
       <Typography variant="h5" component="div" sx={{ flexGrow: 1, textAlign: 'center', mt: 5  }}>
-    <div className="subtitulo">Professional Warehouse</div>
-    <div className="titulo">Warehouse <span className="resaltar"> solution </span>for every need</div>
+    <div className="subtitulo" style={{color:"#003784", fontWeight:"700", fontSize:"30px",marginBottom:"10px"}}>Contact</div>
+    <Typography gutterBottom variant="h6" component="div"  >
+    We will contact you as soon as possible. Just leave us your information and queries with which we can help you.
+          </Typography>
     </Typography>
     <div className="divisor"> </div>
-    <Grid container sx={{ m: 1, p: 2 }}>
-      <Grid item md={4} sm={12}  style={styles.superiorMargin} >
-      <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={require('../assets/wallpaper.jpg')}
-          alt="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Lizard
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-      </CardActions>
-    </Card>
-      </Grid>
-      <Grid item md={4} sm={12} className="objeto">
-      <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={require('../assets/wallpaper.jpg')}
-          alt="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Lizard
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-      </CardActions>
-    </Card>
-      </Grid>
-      <Grid item md={4} sm={12} className="objeto">
-      <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={require('../assets/wallpaper.jpg')}
-          alt="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Lizard
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            CONTACTO
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-      </CardActions>
-    </Card>
-      </Grid>
-    </Grid>
+    </div>
 
-    <Grid container sx={{ m: 1, p: 2 }}>
-      <Grid item md={4} sm={12}>
-      <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-      <CardMedia
-          component="img"
-          height="140"
-          image={require('../assets/wallpaper.jpg')}
-          alt="green iguana"
+
+    <Box  style={{display:"block",width:"100%",marginTop:"30px"}}
+      sx={{
+        '& .MuiTextField-root': { m: 1, width: '33%' },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+      <div style={{display:"flex",justifyContent:"center"}}>
+        <TextField style={{width:"100%"}}
+          label="Name"
+          defaultValue="Name"
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Lizard
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-      </CardActions>
-    </Card>
-      </Grid>
-      <Grid item md={4} sm={12} className="objeto">
-      <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={require('../assets/wallpaper.jpg')}
-          alt="green iguana"
+        <TextField style={{width:"100%"}}
+          label="Last Name"
+          defaultValue="Last Name"
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Lizard
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-      </CardActions>
-    </Card>
-      </Grid>
-      <Grid item md={4} sm={12} className="objeto">
-      <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={require('../assets/wallpaper.jpg')}
-          alt="green iguana"
+      </div>
+      <div style={{display:"flex",justifyContent:"center"}}>
+      <TextField
+          type="email" style={{width:"100%"}}
+          label="Email"
+          defaultValue="Email"
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Lizard
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-      </CardActions>
-    </Card>
-      </Grid>
-    </Grid>
+          <TextField style={{width:"100%"}}
+          type="number"
+          label="Phone number"
+          defaultValue="Phone number"
+        />
+      </div>
+      <div style={{display:"flex",justifyContent:"center"}}>
+      
+          <TextField style={{width:"100%"}}
+          label="Message"
+          defaultValue="Message"
+        />
+      </div>
+      <div style={{display:"flex",justifyContent:"center"}}>
+      <Button variant="contained" sx={{mt:3,mb:1}} style={{backgroundColor:"#003784",width:"30%"}}>Send</Button>
+      </div>
+    </Box>
+    </div>
+   
+
+   
+
    
     </Container>
-    <Parallax className="parallax" bgImage={Image}  strength={400}>
-       <div>  <div style={{ height: 300 }}>
-         <div className="titulo">Warehouse for every need</div> 
-       </div> </div>
 
-    </Parallax>
-    <Container className="margin-superior">
-      <Grid container sx={{ m: 1, p: 2 }} >
-        <Grid item md={6} sm={12} >
-        <img src={require('../assets/wallpaper.jpg')} alt="asd" className="imagen5"/>
-       </Grid>
-       <Grid item md={6} sm={12} >
     
-
-       <Card className="contenedor-derecho">
-      <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          Word of the Day
-        </Typography>
-        <Typography variant="h5" component="div">
-         sa
-        </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          adjective
-        </Typography>
-        <Typography variant="body2">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-
-
-       </Grid>
-      </Grid>
-    </Container>
-
-    <Parallax className="parallax" bgImage={Image}  strength={400}>
-        
-       <ImageList   sx={{ width: 500, height: 450 }}  >
-     
-        <ImageListItem >
-          <img
-           src={require('../assets/photo-1589118949245-7d38baf380d6.jpg')}
-           alt="asd"
-            loading="lazy"
-          />
-          <ImageListItemBar
-            title="Image title"
-            subtitle="Image subtitle"
-            actionIcon={
-              <IconButton
-                sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                aria-label={`info about`}
-              >
-                <InfoIcon />
-              </IconButton>
-            }
-          />
-        </ImageListItem>
-    </ImageList>
+    <Parallax   className="parallax" bgImage={Image}  strength={800}>
+         <div style={{ height: 350 , paddingLeft: "30px", paddingRight: "30px",display:"flex", justifyContent:"Center", alignItems:"center"}}>
+          <div style={{display:"block", textAlign:"center"}}>
+         <div className="titulo" style={{ fontSize: 40, color: "#fff", fontWeight:"600" }}>Highly qualified staff</div> 
+         <div className="titulo titulo3" style={{ fontSize: 15, color: "#fff",marginTop:"20px" }}>The experience and constant training of our technical staff are the pillars on which we<br/>  support the quality of the service we provide.</div> 
+    <div className="divisor-white"> </div>
+         </div>
+       </div> 
     </Parallax>
+   
+    <Container>
+    <Grid container sx={{  p: 2, mt:5, mb:5}} >
+      <Grid item md={4} sm={12} className="textoizquierda">
+      <Typography variant="h6"  gutterBottom style={{color:"#003784",fontWeight:"bold"}}>
+      TRANSPORTATION COMPANY
+    </Typography>
+    <Typography variant="h4" sx={{my:2}} style={{fontWeight:"bold"}} gutterBottom  >
+    We provide full range global logistics solution
+    </Typography>
+    <Typography variant="h5" gutterBottom component="div" style={{textAlign:"justify",color:"#003784"}} >
+    You can take your freight & logistics needs with a personal approach with us
+    </Typography>
+    <Typography gutterBottom component="div" style={{textAlign:"justify"}} sx={{mt:3}}>
+    We transport all types of cargo locally and nationally with high safety and quality standards.
+
+    </Typography>
+      </Grid>
+      <Grid item md={4} sm={12} className="contenedor-imagen"style={{display:"flex",justifyContent:"center",margin:"auto",paddingLeft:"40px"}}>
+        <div style={{display:"block", textAlign:"center"}}>
+        <img style={{width:"650px",height:"360px"}} 
+            alt="asd" 
+            className="imagen6"
+              src={require('../assets/truck.jpg')}
+            />
+            
+    </div>
+      </Grid>
+    </Grid>
+    </Container>
+    <Footer/>
     </div>
   )
-}
+} 
 
 export default Contact

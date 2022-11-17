@@ -1,0 +1,13 @@
+@media(max-width: 600px){
+  .valores {
+    text-align: center !important;
+
+}
+.vision{
+    margin-top:45px !important;
+}
+}  
+.css-1p823my-MuiListItem-root{
+    padding-left:0px;
+    padding-right:0px;
+}

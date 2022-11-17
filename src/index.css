@@ -14,3 +14,9 @@ code {
 .MuiImageList-root.MuiImageList-standard.css-j4syev-MuiImageList-root{
   display: inline;
 }
+@media(max-width: 600px){
+.container-links{
+  padding-top:30px;
+  padding-left:-13px !important;
+}
+}
